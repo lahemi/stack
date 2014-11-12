@@ -1,3 +1,4 @@
+// 2014, Lauri Peltomäki
 // Licensed CC0, so go nuts.
 package stack
 
