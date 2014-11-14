@@ -1,10 +1,9 @@
-// 2014, Lauri Peltomäki
-// Licensed CC0, so go nuts.
+// Package stack provides a general stack with some basic stack operation methods.
 package stack
 
 import "errors"
 
-var emptyStackError = errors.New("Attempting to Pop an empty stack")
+var errEmptyStack = errors.New("attempting to Pop an empty stack")
 
 type Stack struct {
 	s []interface{}
@@ -16,7 +15,7 @@ func (s *Stack) Push(a interface{}) {
 
 func (s *Stack) PopE() (interface{}, error) {
 	if len(s.s) == 0 {
-		return nil, emptyStackError
+		return nil, errEmptyStack
 	}
 	last := s.s[len(s.s)-1]
 	s.s = s.s[:len(s.s)-1]
