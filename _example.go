@@ -44,4 +44,15 @@ func main() {
 
 	// The only thing that matters when actually using
 	// the values is doing the type assertions correctly.
+
+	// Pick is pretty fancy.
+	st := stack.Stack{}
+	st.Push(1)
+	st.Push(2)
+	st.Push(3)
+	st.Push(4)
+	st.Push(5)
+	fmt.Println(st)
+	st.Pick(3)
+	fmt.Println(st)
 }
